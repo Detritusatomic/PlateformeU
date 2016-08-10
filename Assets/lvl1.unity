@@ -268,11 +268,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f4ae27809d5d641b1454947df32b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firerate: 0
+  firerate: 3.36
   damage: 10
   notToHit:
     serializedVersion: 2
     m_Bits: 4294967295
+  bulletPrefab: {fileID: 4000012175706426, guid: b44abcd20b1f7ff4ea0827f0efe93de2,
+    type: 2}
 --- !u!1 &149005009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,11 +1264,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -57.7
+      value: -56.64
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -5.77
+      value: -5.41
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.z
