@@ -8,6 +8,7 @@ public class gunFire : MonoBehaviour {
     [SerializeField]public LayerMask notToHit;
 
     [SerializeField]public Transform bulletPrefab;
+    [SerializeField]public Transform muzzlePrefab;
 
     private float timeToFire = 0;
     Transform firePoint;
@@ -57,5 +58,10 @@ public class gunFire : MonoBehaviour {
     void Effect()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Transform clone = (Transform)Instantiate(muzzlePrefab, firePoint.position, firePoint.rotation);
+        clone.parent = firePoint;
+        float size = Random.Range(0.4f, 0.9f);
+        clone.localScale = new Vector3(size, size, 0);
+        Destroy(clone.gameObject, 0.1f);
     }
 }
