@@ -48,11 +48,7 @@ public class gunFire : MonoBehaviour {
         Vector2 firePointPosition = new Vector2(firePoint.position.x, firePoint.position.y);
         RaycastHit2D hit = Physics2D.Raycast(firePointPosition, mousePosition-firePointPosition,10, notToHit);
         Effect();
-        Debug.DrawLine(firePointPosition, mousePosition, Color.green);
-        if(hit.collider != null)
-        {
-            Debug.DrawLine(firePointPosition, hit.point, Color.red);
-        }
+
     }
 
     void Effect()
