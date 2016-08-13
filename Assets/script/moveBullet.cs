@@ -14,9 +14,11 @@ public class moveBullet : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-           Transform impact = transform.FindChild("fireImpact");
-           Transform clone = Instantiate(hitPrefab, impact.position, transform.rotation) as Transform;
-           Destroy(clone.gameObject, 1);
-           Destroy(gameObject);
+        if (col.gameObject.tag != transform.gameObject.tag) {
+            Transform impact = transform.FindChild("fireImpact");
+            Transform clone = Instantiate(hitPrefab, impact.position, transform.rotation) as Transform;
+            Destroy(clone.gameObject, 1);
+            Destroy(gameObject);
+        }
     }
 }
