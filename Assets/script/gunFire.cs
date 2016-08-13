@@ -13,6 +13,8 @@ public class gunFire : MonoBehaviour {
     private float timeToFire = 0;
     Transform firePoint;
 
+    protected bool paused=false;
+
     // Use this for initialization
     void Start () {
         firePoint = transform.FindChild("FirePoint");
@@ -40,15 +42,17 @@ public class gunFire : MonoBehaviour {
 	}
     void Shoot()
     {
-        float x = Input.mousePosition.x;
-        float y = Input.mousePosition.y;
+        if (!paused)
+        {
+            float x = Input.mousePosition.x;
+            float y = Input.mousePosition.y;
 
-        
-        Vector2 mousePosition = new Vector2(Camera.main.ScreenToWorldPoint(new Vector3(x, y, -Camera.main.transform.position.z)).x, Camera.main.ScreenToWorldPoint(new Vector3(x, y, -Camera.main.transform.position.z)).y);
-        Vector2 firePointPosition = new Vector2(firePoint.position.x, firePoint.position.y);
-        RaycastHit2D hit = Physics2D.Raycast(firePointPosition, mousePosition-firePointPosition,10, notToHit);
-        Effect();
 
+            Vector2 mousePosition = new Vector2(Camera.main.ScreenToWorldPoint(new Vector3(x, y, -Camera.main.transform.position.z)).x, Camera.main.ScreenToWorldPoint(new Vector3(x, y, -Camera.main.transform.position.z)).y);
+            Vector2 firePointPosition = new Vector2(firePoint.position.x, firePoint.position.y);
+            RaycastHit2D hit = Physics2D.Raycast(firePointPosition, mousePosition - firePointPosition, 10, notToHit);
+            Effect();
+        }
     }
 
     void Effect()
@@ -59,5 +63,15 @@ public class gunFire : MonoBehaviour {
         float size = Random.Range(0.4f, 0.9f);
         clone.localScale = new Vector3(size, size, 0);
         Destroy(clone.gameObject, 0.1f);
+    }
+
+    void OnResumeGame()
+    {
+        paused = false;
+    }
+
+    void OnPauseGame()
+    {
+        paused = true;
     }
 }

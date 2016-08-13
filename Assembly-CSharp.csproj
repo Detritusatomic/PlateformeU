@@ -59,6 +59,7 @@
      <Compile Include="Assets\script\gunFire.cs" />
      <Compile Include="Assets\script\gunRotation.cs" />
      <Compile Include="Assets\script\moveBullet.cs" />
+     <Compile Include="Assets\script\pauseScript.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
