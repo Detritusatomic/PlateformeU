@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c5b181ead97584195aea4e16acad91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 20
+  moveSpeed: 10
   hitPrefab: {fileID: 4000013148367960, guid: f4bf6f84158bdaa498d3eb109d168ce4, type: 2}
 --- !u!212 &212000012584035576
 SpriteRenderer:
