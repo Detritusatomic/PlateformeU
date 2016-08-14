@@ -420,6 +420,48 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &214617776
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000013459911538, guid: 516bd09799acff0409477125d9c5649d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -126.29804
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013459911538, guid: 516bd09799acff0409477125d9c5649d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.2820134
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013459911538, guid: 516bd09799acff0409477125d9c5649d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013459911538, guid: 516bd09799acff0409477125d9c5649d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013459911538, guid: 516bd09799acff0409477125d9c5649d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013459911538, guid: 516bd09799acff0409477125d9c5649d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013459911538, guid: 516bd09799acff0409477125d9c5649d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013459911538, guid: 516bd09799acff0409477125d9c5649d, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 516bd09799acff0409477125d9c5649d, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &238905544
 GameObject:
   m_ObjectHideFlags: 0
@@ -4566,7 +4608,7 @@ Prefab:
         type: 2}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 4000013731979316, guid: 4c96157b8b4f4244ba233c35da0de635,
+      objectReference: {fileID: 4000013459911538, guid: 516bd09799acff0409477125d9c5649d,
         type: 2}
     - target: {fileID: 114000011637558108, guid: 753e85edf85f41b498d640e372ee075c,
         type: 2}
