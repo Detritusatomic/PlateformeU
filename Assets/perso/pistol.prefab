@@ -24,7 +24,7 @@ GameObject:
   - 114: {fileID: 114000010415718094}
   m_Layer: 0
   m_Name: pistol
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
   notToHit:
     serializedVersion: 2
     m_Bits: 4294967295
-  bulletPrefab: {fileID: 4000013259200092, guid: b44abcd20b1f7ff4ea0827f0efe93de2,
+  bulletPrefab: {fileID: 4000012723276516, guid: 516bd09799acff0409477125d9c5649d,
     type: 2}
   muzzlePrefab: {fileID: 4000010852840662, guid: c9c4e7858cd092443a14e37dff59a030,
     type: 2}

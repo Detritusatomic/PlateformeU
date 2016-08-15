@@ -59,6 +59,7 @@
      <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+     <Compile Include="Assets\Tazo_fx\Script\BillBoard.cs" />
      <Compile Include="Assets\script\SetSortingLayer.cs" />
      <Compile Include="Assets\script\gunFire.cs" />
      <Compile Include="Assets\script\gunRotation.cs" />

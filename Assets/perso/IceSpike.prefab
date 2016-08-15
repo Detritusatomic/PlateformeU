@@ -89,7 +89,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &61000011485493258
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -132,8 +132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c5b181ead97584195aea4e16acad91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 15
-  hitPrefab: {fileID: 4000013148367960, guid: f4bf6f84158bdaa498d3eb109d168ce4, type: 2}
+  moveSpeed: 16
+  hitPrefab: {fileID: 400008, guid: c459dc8cf2a04624eb4d91f0b9ef9daa, type: 2}
 --- !u!212 &212000013742399720
 SpriteRenderer:
   m_ObjectHideFlags: 1
