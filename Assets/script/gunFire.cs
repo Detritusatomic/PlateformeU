@@ -15,13 +15,16 @@ public class gunFire : MonoBehaviour {
 
     protected bool paused=false;
 
+   
     // Use this for initialization
     void Start () {
         firePoint = transform.FindChild("FirePoint");
         if (firePoint == null){
             Debug.LogError("Pas de FirePoint");
         }
-	}
+
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -39,6 +42,7 @@ public class gunFire : MonoBehaviour {
                 Shoot();
             }
         }
+
 	}
     void Shoot()
     {

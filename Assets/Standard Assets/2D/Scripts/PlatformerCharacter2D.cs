@@ -1,4 +1,4 @@
-using System;
+using System.Collections;
 using UnityEngine;
 
 namespace UnityStandardAssets._2D
@@ -21,7 +21,7 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
         private bool test=false;
-        Transform gun;
+        ArrayList armes = new ArrayList();
 
 
         private void Awake()
@@ -31,7 +31,14 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
-            gun = transform.FindChild("gun");
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                Transform tmp = transform.GetChild(i);
+                if (tmp.tag == "Weapon")
+                {
+                    armes.Add(tmp);
+                }
+            }
         }
 
 
@@ -122,11 +129,15 @@ namespace UnityStandardAssets._2D
             // Multiply the player's x local scale by -1.
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
-            transform.localScale = theScale;
+            transform.localScale = theScale;       
 
-            Vector3 theScale2 = gun.localScale;
-            theScale2.x *= -1;
-            gun.localScale = theScale2;
+            for (int i = 0; i < armes.Count; i++)
+            {
+                Transform tmp = (Transform)armes[i];
+                Vector3 theScale2 =tmp.localScale;
+                theScale2.x *= -1;
+                tmp.localScale = theScale2;
+            }
         }
     }
 }

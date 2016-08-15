@@ -63,6 +63,7 @@
      <Compile Include="Assets\script\gunFire.cs" />
      <Compile Include="Assets\script\gunRotation.cs" />
      <Compile Include="Assets\script\moveBullet.cs" />
+     <Compile Include="Assets\script\multiWeapon.cs" />
      <Compile Include="Assets\script\pauseScript.cs" />
      <Compile Include="Assets\time.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
