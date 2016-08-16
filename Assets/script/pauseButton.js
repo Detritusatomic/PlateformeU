@@ -12,3 +12,8 @@ function goMenu() {
     }
     Application.LoadLevel("menu");
 }
+
+function restart() {
+    Time.timeScale = 1;    
+    Application.LoadLevel(Application.loadedLevelName);
+}
