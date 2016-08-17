@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 16
+  hitLifeTime: 1
   hitPrefab: {fileID: 400008, guid: c459dc8cf2a04624eb4d91f0b9ef9daa, type: 2}
 --- !u!212 &212000013742399720
 SpriteRenderer:

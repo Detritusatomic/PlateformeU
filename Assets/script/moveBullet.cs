@@ -4,6 +4,7 @@ using System.Collections;
 public class moveBullet : MonoBehaviour {
 
     public int moveSpeed = 230;
+    public int hitLifeTime=2;
     public Transform hitPrefab;
 
 	// Update is called once per frame
@@ -18,7 +19,7 @@ public class moveBullet : MonoBehaviour {
             Transform impact = transform.FindChild("fireImpact");
             Quaternion rot = new Quaternion();
             Transform clone = Instantiate(hitPrefab, impact.position, transform.rotation) as Transform;
-            Destroy(clone.gameObject, 1);
+            Destroy(clone.gameObject, hitLifeTime);
             Destroy(gameObject);
         }
     }
