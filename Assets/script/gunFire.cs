@@ -15,7 +15,12 @@ public class gunFire : MonoBehaviour {
 
     protected bool paused=false;
 
-   
+    [SerializeField]
+    private PlayerStat stat;
+
+    public int manaCost;
+
+
     // Use this for initialization
     void Start () {
         firePoint = transform.FindChild("FirePoint");
@@ -30,16 +35,19 @@ public class gunFire : MonoBehaviour {
 	void Update () {
         if (firerate == 0)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") && stat.mana.CurrentVal-manaCost >=0)
             {
                 Shoot();
+                stat.mana.CurrentVal -= manaCost;
             }
         }
         else
         {
-            if (Input.GetButton("Fire1") && Time.time > timeToFire){
+            if (Input.GetButton("Fire1") && Time.time > timeToFire && stat.mana.CurrentVal - manaCost >= 0)
+            {
                 timeToFire = Time.time + 1 / firerate;
                 Shoot();
+                stat.mana.CurrentVal -= manaCost;
             }
         }
 

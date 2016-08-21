@@ -24,6 +24,7 @@ namespace UnityStandardAssets._2D
         ArrayList armes = new ArrayList();
 
 
+
         private void Awake()
         {
             // Setting up references.
