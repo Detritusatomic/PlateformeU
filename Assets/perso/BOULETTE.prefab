@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 15
+  damage: 10
   hitLifeTime: 1
   hitPrefab: {fileID: 4000013148367960, guid: f4bf6f84158bdaa498d3eb109d168ce4, type: 2}
 --- !u!212 &212000011637078718

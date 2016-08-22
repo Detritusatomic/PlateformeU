@@ -22,7 +22,7 @@ public class ennemieController : MonoBehaviour
 
     void Update()
     {
-        this.GetComponent<Rigidbody2D>().velocity = new Vector2(velocity, this.GetComponent<Rigidbody2D>().velocity.y);
+        
         Transform feu = this.transform.FindChild("firePoint");
         
         dir = target.position - feu.position;
@@ -31,16 +31,21 @@ public class ennemieController : MonoBehaviour
         feu.rotation = Quaternion.Euler(0f, 0f, rotZ + rotationOffset);
 
         RaycastHit2D hit = Physics2D.Raycast(feu.position, dir.normalized, distanceAgro,mask);
-        if (hit.collider != null && hit.collider.gameObject.tag=="Player")
+        if (hit.collider != null && hit.collider.gameObject.tag == "Player")
         {
-            
             Debug.DrawLine(feu.position, hit.point, Color.green, 2);
             if (Time.time > timeToFire)
             {
                 timeToFire = Time.time + 1 / firerate;
                 Instantiate(bullet, feu.position, feu.rotation);
             }
+            this.GetComponent<Rigidbody2D>().velocity = new Vector2(0, this.GetComponent<Rigidbody2D>().velocity.y);
         }
+        else
+        {
+            this.GetComponent<Rigidbody2D>().velocity = new Vector2(velocity, this.GetComponent<Rigidbody2D>().velocity.y);
+        }
+
     }
 
     void OnTriggerEnter2D(Collider2D other)

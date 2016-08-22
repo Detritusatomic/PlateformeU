@@ -4,6 +4,7 @@ using System.Collections;
 public class moveBullet : MonoBehaviour {
 
     public int moveSpeed = 230;
+    public int damage;
     public int hitLifeTime=2;
     public Transform hitPrefab;
 
@@ -21,6 +22,16 @@ public class moveBullet : MonoBehaviour {
             Transform clone = Instantiate(hitPrefab, impact.position, transform.rotation) as Transform;
             Destroy(clone.gameObject, hitLifeTime);
             Destroy(gameObject);
+
+            if (col.gameObject.tag == "Player")
+            {
+                PlayerStat stat = col.gameObject.GetComponent<PlayerStat>();
+                stat.health.CurrentVal -= damage;
+            }
+            else if (col.gameObject.tag == "Enemy")
+            {
+                Destroy(col.gameObject);
+            }
         }
     }
 }
