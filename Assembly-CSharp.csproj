@@ -88,6 +88,7 @@
      <Compile Include="Assets\script\PlayerStat.cs" />
      <Compile Include="Assets\script\SetSortingLayer.cs" />
      <Compile Include="Assets\script\Stat.cs" />
+     <Compile Include="Assets\script\ennemieController.cs" />
      <Compile Include="Assets\script\gunFire.cs" />
      <Compile Include="Assets\script\gunRotation.cs" />
      <Compile Include="Assets\script\moveBullet.cs" />

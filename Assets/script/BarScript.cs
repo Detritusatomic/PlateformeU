@@ -8,6 +8,7 @@ public class BarScript : MonoBehaviour {
 
     public float fillAmount;
     public Image content;
+    public float animationSpeed;
 
     public float MaxValue { get; set; }
 
@@ -30,7 +31,7 @@ public class BarScript : MonoBehaviour {
 
     private void HandleBar()
     {
-        content.fillAmount = fillAmount;
+        content.fillAmount = Mathf.Lerp(content.fillAmount,fillAmount,Time.deltaTime * animationSpeed);
     }
 
     private float Map(float value, float inMin, float inMax, float outMin, float outMax){

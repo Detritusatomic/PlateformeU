@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Fire
   - Weapon
+  - Platform
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 
