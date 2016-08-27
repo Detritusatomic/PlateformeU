@@ -6,7 +6,7 @@ public class gunRotation : MonoBehaviour {
     [SerializeField]public int rotationOffset = 90;
     protected bool paused=false;
     // Update is called once per frame
-    void Update () {
+    void Update() {
         if (!paused)
         {
             float x = Input.mousePosition.x;
@@ -16,6 +16,7 @@ public class gunRotation : MonoBehaviour {
             difference.Normalize();
             float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, 0f, rotZ + rotationOffset);
+
         }
 	}
 
@@ -28,6 +29,9 @@ public class gunRotation : MonoBehaviour {
     {
         paused = false;
     }
-
+    void flip()
+    {
+        transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+    }
 
 }

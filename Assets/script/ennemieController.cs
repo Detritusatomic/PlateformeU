@@ -14,7 +14,6 @@ public class ennemieController : MonoBehaviour
 
     private float timeToFire = 0;
     private Vector3 dir;
-
     void Start()
     {
         
@@ -22,7 +21,8 @@ public class ennemieController : MonoBehaviour
 
     void Update()
     {
-        
+
+
         Transform feu = this.transform.FindChild("firePoint");
         
         dir = target.position - feu.position;
